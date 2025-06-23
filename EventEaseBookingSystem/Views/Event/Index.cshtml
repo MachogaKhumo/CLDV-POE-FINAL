@@ -1,0 +1,40 @@
+﻿@model IEnumerable<EventEaseBookingSystem.Models.Event>
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h1 class="mb-4">Events</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Add New Event</a>
+</p>
+
+<table class="table table-striped table-bordered" style="background-color: #2d578a;">
+    <thead class="table-dark">
+        <tr>
+            <th>Event Name</th>
+            <th>Event Date</th>
+            <th>Type</th> <!--EventType-->
+            <th>Description</th> 
+            <th>Venue</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EventName</td>
+                <td>@item.EventDate.ToShortDateString()</td>
+                <td>@item.EventType?.EventTypeName</td>
+                <td>@item.Description</td> 
+                <td>@item.Venue?.VenueName</td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.EventId" style="background-color: #c9def4; color: black; border-radius: 5px; padding: 8px 12px;">Details</a>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.EventId" style="background-color: #f5ccd4; color: black; border-radius: 5px; padding: 8px 12px;">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.EventId" style="background-color: #b8a4c9; color: black; border-radius: 5px; padding: 8px 12px;">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

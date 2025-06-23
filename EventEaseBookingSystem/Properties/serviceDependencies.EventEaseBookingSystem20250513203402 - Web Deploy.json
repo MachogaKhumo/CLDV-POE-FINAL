@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "storage1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.Web/sites/EventEaseBookingSystem20250513203402/providers/Microsoft.ServiceLinker/linkers/StorageConnection_885B9A7144, /subscriptions/b875439c-82a5-4c73-bd17-e7c46dea00b4/resourcegroups/KhumoAppService/providers/Microsoft.Web/sites/EventEaseBookingSystem20250513203402/providers/Microsoft.ServiceLinker/linkers/StorageConnection_712B4AE9F8",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/eventeaseblobpt2",
+      "type": "storage.azure",
+      "connectionId": "StorageConnection"
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.Web/sites/EventEaseBookingSystem20250513203402/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsDatabaseConnection_88A8B578D1",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/eventease-st10396677/databases/EventEaseDB",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DatabaseConnection"
+    }
+  }
+}

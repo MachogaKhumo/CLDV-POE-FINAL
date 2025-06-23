@@ -1,0 +1,51 @@
+﻿@model Venue
+@using EventEaseBookingSystem.Models
+
+@{
+    ViewData["Title"] = "Add New Venue";
+}
+
+<h2 style="color: #007bff; font-size: 24px;">@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="VenueName" class="form-label"></label>
+        <input asp-for="VenueName" class="form-control" />
+        <span asp-validation-for="VenueName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Location" class="form-label"></label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Capacity" class="form-label"></label>
+        <input asp-for="Capacity" class="form-control" />
+        <span asp-validation-for="Capacity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFile" class="control-label"></label>
+        <input asp-for="ImageFile" class="form-control" type="file" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    <button type="submit" style="background-color: #ff33d0; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Save</button>
+    <a asp-action="Index" style="background-color: #6c757d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Cancel</a>
+</form>
+
+@if (!string.IsNullOrEmpty(Model?.ImageUrl))
+{
+    <div class="mt-4">
+        <h4>Selected Image:</h4>
+        <img src="@Model.ImageUrl" alt="Venue Image" style="max-width: 300px; max-height: 200px;" />
+    </div>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

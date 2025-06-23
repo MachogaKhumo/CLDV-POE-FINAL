@@ -1,0 +1,46 @@
+﻿@model Venue
+@using EventEaseBookingSystem.Models
+
+@{
+    ViewData["Title"] = "Venue Details";
+}
+
+<div class="container mt-4">
+    <h2 class="text-primary mb-4">@ViewData["Title"]</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h3 class="card-title mb-4">@Model.VenueName</h3>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <p><strong class="text-muted">Location:</strong> @Model.Location</p>
+                    <p><strong class="text-muted">Capacity:</strong> @Model.Capacity</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                    {
+                        <img src="@Model.ImageUrl"
+                             alt="Image of @Model.VenueName"
+                             class="img-fluid rounded shadow-sm"
+                             style="max-height: 200px;"
+                             onerror="this.onerror=null;this.src='/images/default-venue.png';" />
+                    }
+                    else
+                    {
+                        <img src="/images/default-venue.png"
+                             alt="Default Venue Image"
+                             class="img-fluid rounded shadow-sm"
+                             style="max-height: 200px;" />
+                        <div class="text-muted mt-2">No image uploaded</div>
+                    }
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <a asp-action="Edit" asp-route-id="@Model.VenueId" class="btn btn-warning me-2">Edit Venue</a>
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

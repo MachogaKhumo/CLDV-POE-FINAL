@@ -1,0 +1,44 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2025-05-13T18:45:04.9325445Z"
+    },
+    "storage1": {
+      "restored": true,
+      "restoreTime": "2025-05-13T18:43:18.444765Z"
+    }
+  },
+  "parameters": {
+    "storage1.serviceConnectorResourceGroupName": {
+      "Name": "storage1.serviceConnectorResourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "KhumoAppService"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "b875439c-82a5-4c73-bd17-e7c46dea00b4"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "KhumoAppService"
+    },
+    "storage1.resourceGroupName": {
+      "Name": "storage1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "KhumoAppService"
+    },
+    "storage1.subscriptionId": {
+      "Name": "storage1.subscriptionId",
+      "Type": "subscription",
+      "Value": "b875439c-82a5-4c73-bd17-e7c46dea00b4"
+    },
+    "mssql1.serviceConnectorResourceGroupName": {
+      "Name": "mssql1.serviceConnectorResourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "KhumoAppService"
+    }
+  }
+}

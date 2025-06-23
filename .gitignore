@@ -1,0 +1,48 @@
+# Ignore environment files containing secrets
+.env
+appsettings.json
+appsettings.Development.json
+
+# Ignore Visual Studio and .NET-generated files
+*.vs
+bin/
+obj/
+*.dll
+*.pdb
+
+# Ignore temporary and build files
+*.log
+*.tmp
+*.bak
+*.swp
+Thumbs.db
+
+# Ignore database backups or local SQLite/MDF files
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Ignore Azure secrets (store them in environment variables or Key Vault)
+azure_storage_key.txt
+secrets.json
+
+# Ignore compiled or cached files
+*.cache
+*.pyc
+*.class
+__pycache__/
+
+# Ignore Node.js modules (if applicable)
+node_modules/
+
+# Ignore generated documentation
+docs/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Git submodules
+.gitmodules
+
+
